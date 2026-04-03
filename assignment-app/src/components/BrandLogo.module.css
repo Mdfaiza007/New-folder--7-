@@ -1,0 +1,40 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--type-brand-wordmark-size);
+  line-height: var(--type-brand-wordmark-leading);
+  font-weight: var(--type-brand-wordmark-weight);
+  letter-spacing: var(--type-brand-wordmark-tracking);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.root:hover {
+  opacity: 0.88;
+}
+
+.mark {
+  width: var(--size-brand-mark);
+  height: var(--size-brand-mark);
+  flex-shrink: 0;
+  border-radius: var(--radius-brand-mark);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  box-shadow: var(--shadow-sm);
+}
+
+.wordmark {
+  white-space: nowrap;
+}
+
+.variantDefault {
+  color: var(--color-text);
+}
+
+.variantInverted {
+  color: var(--color-footer-link-hover);
+}
+
+.variantInverted .mark {
+  box-shadow: none;
+}

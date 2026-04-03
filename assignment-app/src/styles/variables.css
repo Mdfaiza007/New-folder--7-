@@ -1,0 +1,247 @@
+/**
+ * FIGMA SYNC
+ * ------------
+ * We cannot read your Figma file from this environment. For a 1:1 match, open each
+ * Text style / Variable in Figma and paste sizes (px), line heights (px), letter
+ * spacing (px or %), and spacing values here. All components below consume ONLY
+ * these tokens — no one-off typography or spacing should remain in feature CSS.
+ *
+ * Tip: Figma “Line height” in px → use the same px here. “Letter spacing” in % →
+ * use calc: e.g. 2% on 16px → letter-spacing: 0.02em (approx) or exact px in Figma Inspect.
+ */
+
+:root {
+  /* ----- Font family (match Figma > Text > font family) ----- */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ----- Core palette (match Figma color styles) ----- */
+  --color-bg: #f4f6fb;
+  --color-bg-elevated: #ffffff;
+  --color-text: #0b1220;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-soft: rgba(79, 70, 229, 0.12);
+
+  --color-accent: #0ea5e9;
+  --color-accent-2: #8b5cf6;
+
+  --color-footer-bg: #0f172a;
+  --color-footer-text: #94a3b8;
+  --color-footer-heading: #e2e8f0;
+  --color-footer-link-hover: #f8fafc;
+
+  --color-cta-on-dark-muted: #cbd5e1;
+  --color-cta-on-dark: #f1f5f9;
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.14) 0%,
+    rgba(14, 165, 233, 0.12) 45%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+
+  --gradient-feature-band: linear-gradient(180deg, var(--color-bg) 0%, #eef2ff 40%, var(--color-bg) 100%);
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 48px rgba(15, 23, 42, 0.1);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* ----- Spacing scale: 4px base (typical Figma “4/8” grid) ----- */
+  --s-0: 0;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 28px;
+  --s-8: 32px;
+  --s-9: 40px;
+  --s-10: 48px;
+  --s-11: 64px;
+  --s-12: 80px;
+  --s-13: 96px;
+
+  /* Legacy semantic aliases — point at the scale above */
+  --space-xs: var(--s-1);
+  --space-sm: var(--s-2);
+  --space-md: var(--s-4);
+  --space-lg: var(--s-6);
+  --space-xl: var(--s-8);
+  --space-2xl: var(--s-10);
+  --space-3xl: var(--s-12);
+
+  /* ----- Layout ----- */
+  --page-gutter-x-sm: var(--s-4);
+  --page-gutter-x-md: var(--s-6);
+  --page-gutter-x-lg: var(--s-8);
+
+  --container-narrow: 544px;
+  --container-max: 1200px;
+  --container-wide: 1200px;
+
+  --header-height: 72px;
+  --tap-target: 44px;
+
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 900px;
+  --bp-xl: 960px;
+  --bp-2xl: 1024px;
+
+  --grid-card-min: 280px;
+
+  /* Section vertical rhythm (mobile first, override at xl) */
+  --section-hero-pt-sm: var(--s-11);
+  --section-hero-pb-sm: var(--s-10);
+  --section-hero-pt-lg: var(--s-12);
+  --section-hero-pb-lg: var(--s-11);
+
+  --section-features-py-sm: var(--s-11);
+  --section-features-py-lg: var(--s-12);
+
+  --section-logo-py-sm: var(--s-10);
+  --section-logo-py-lg: var(--s-11);
+
+  --section-spacious-py-sm: var(--s-11);
+  --section-spacious-py-lg: var(--s-13);
+
+  --footer-pt-sm: var(--s-11);
+  --footer-pt-lg: var(--s-12);
+  --footer-pb: var(--s-8);
+
+  --hero-grid-gap-sm: var(--s-10);
+  --hero-grid-gap-lg: var(--s-12);
+
+  /* ----- Typography: replace with Figma Text style px values ----- */
+  --type-body-size: 16px;
+  --type-body-leading: 24px;
+  --type-body-weight: 400;
+  --type-body-tracking: 0;
+
+  --type-body-sm-size: 14px;
+  --type-body-sm-leading: 20px;
+
+  --type-eyebrow-size: 12px;
+  --type-eyebrow-leading: 16px;
+  --type-eyebrow-weight: 600;
+  --type-eyebrow-tracking: 0.08em;
+
+  --type-section-title-size-sm: 28px;
+  --type-section-title-leading-sm: 36px;
+  --type-section-title-tracking-sm: -0.02em;
+  --type-section-title-size-lg: 40px;
+  --type-section-title-leading-lg: 48px;
+  --type-section-title-tracking-lg: -0.03em;
+  --type-section-title-weight: 700;
+
+  --type-subtitle-size: 16px;
+  --type-subtitle-leading: 24px;
+
+  --type-hero-size-sm: 36px;
+  --type-hero-leading-sm: 44px;
+  --type-hero-tracking-sm: -0.02em;
+  --type-hero-size-lg: 56px;
+  --type-hero-leading-lg: 64px;
+  --type-hero-tracking-lg: -0.03em;
+  --type-hero-weight: 700;
+
+  --type-hero-lede-size: 18px;
+  --type-hero-lede-leading: 28px;
+
+  --type-badge-size: 12px;
+  --type-badge-leading: 16px;
+  --type-badge-weight: 600;
+
+  --type-card-title-size: 18px;
+  --type-card-title-leading: 28px;
+  --type-card-title-weight: 700;
+  --type-card-title-tracking: -0.01em;
+
+  --type-card-body-size: 16px;
+  --type-card-body-leading: 24px;
+
+  --type-nav-link-size: 15px;
+  --type-nav-link-leading: 22px;
+  --type-nav-link-weight: 500;
+
+  --type-nav-mobile-weight: 600;
+
+  --type-meta-size: 12px;
+  --type-meta-leading: 16px;
+  --type-meta-weight: 500;
+
+  --illustration-sidebar-w: 72px;
+  --illustration-mock-min-h: 240px;
+  --illustration-chart-h: 120px;
+  --illustration-chrome-dot: 10px;
+  --illustration-row-line-h: 10px;
+
+  --type-logo-strip-label-size: 12px;
+  --type-logo-strip-label-leading: 16px;
+  --type-logo-strip-label-tracking: 0.06em;
+  --type-logo-strip-label-weight: 600;
+
+  --type-logo-strip-name-size: 17px;
+  --type-logo-strip-name-leading: 24px;
+  --type-logo-strip-name-weight: 700;
+  --type-logo-strip-name-tracking: -0.02em;
+
+  --type-brand-wordmark-size: 16px;
+  --type-brand-wordmark-leading: 24px;
+  --type-brand-wordmark-weight: 700;
+  --type-brand-wordmark-tracking: -0.02em;
+  --size-brand-mark: 32px;
+  --radius-brand-mark: 10px;
+
+  --type-button-md-size: 14px;
+  --type-button-md-leading: 20px;
+  --type-button-md-weight: 600;
+  --btn-pad-y-md: 10px;
+  --btn-pad-x-md: 18px;
+
+  --type-button-lg-size: 15px;
+  --type-button-lg-leading: 22px;
+  --type-button-lg-weight: 600;
+  --btn-pad-y-lg: 12px;
+  --btn-pad-x-lg: 24px;
+  --btn-inner-gap: var(--s-2);
+
+  --type-cta-title-size-sm: 32px;
+  --type-cta-title-leading-sm: 40px;
+  --type-cta-title-size-lg: 36px;
+  --type-cta-title-leading-lg: 44px;
+  --type-cta-title-tracking: -0.03em;
+  --type-cta-title-weight: 700;
+
+  --type-cta-body-size: 16px;
+  --type-cta-body-leading: 24px;
+
+  --type-footer-col-title-size: 12px;
+  --type-footer-col-title-leading: 16px;
+  --type-footer-col-title-weight: 700;
+  --type-footer-col-title-tracking: 0.06em;
+
+  --type-footer-link-size: 15px;
+  --type-footer-link-leading: 22px;
+
+  --type-legal-size: 14px;
+  --type-legal-leading: 20px;
+
+  --section-heading-max-width: 560px;
+  --section-heading-margin-bottom-sm: var(--s-10);
+  --section-heading-margin-bottom-lg: var(--s-11);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+}

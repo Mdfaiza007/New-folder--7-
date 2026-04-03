@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  gap: var(--s-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-card-min)), 1fr));
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: var(--s-8);
+  }
+}

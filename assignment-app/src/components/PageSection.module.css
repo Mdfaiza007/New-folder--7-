@@ -1,0 +1,51 @@
+.section {
+  width: 100%;
+}
+
+.variantDefault {
+  padding-block: var(--section-spacious-py-sm);
+}
+
+.variantHero {
+  position: relative;
+  padding-block: var(--section-hero-pt-sm) var(--section-hero-pb-sm);
+  overflow: hidden;
+}
+
+.variantFeatureBand {
+  padding-block: var(--section-features-py-sm);
+  border-top: 1px solid var(--color-border-subtle);
+  background: var(--gradient-feature-band);
+}
+
+.variantLogo {
+  padding-block: var(--section-logo-py-sm);
+  border-block: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-elevated);
+}
+
+.variantSpacious {
+  padding-block: var(--section-spacious-py-sm);
+}
+
+@media (min-width: 960px) {
+  .variantHero {
+    padding-block: var(--section-hero-pt-lg) var(--section-hero-pb-lg);
+  }
+
+  .variantFeatureBand {
+    padding-block: var(--section-features-py-lg);
+  }
+
+  .variantLogo {
+    padding-block: var(--section-logo-py-lg);
+  }
+
+  .variantSpacious {
+    padding-block: var(--section-spacious-py-lg);
+  }
+
+  .variantDefault {
+    padding-block: var(--section-spacious-py-lg);
+  }
+}
